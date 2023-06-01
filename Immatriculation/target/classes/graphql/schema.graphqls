@@ -1,0 +1,22 @@
+
+type Vehicle {
+    id: Int,
+    registration_plate_number: Int,
+    brand: String,
+    tax_horsepower: Int,
+    vehicle_model: Int,
+    owner: Owner
+}
+
+
+type Owner {
+    id: Int,
+    name: String
+    vehicles:[Vehicle]
+}
+
+type Query {
+    vehicleById(id: Int): Vehicle
+    vehiclesList: [Vehicle]
+    ownersList:[Owner]
+}

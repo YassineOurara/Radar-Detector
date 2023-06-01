@@ -15,8 +15,7 @@ import java.util.List;
 @XmlRootElement(name = "Owner")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Owner {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @XmlElement
     private String name;

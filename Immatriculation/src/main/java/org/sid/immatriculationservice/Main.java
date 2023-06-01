@@ -27,7 +27,7 @@ public class Main {
     @Bean
     CommandLineRunner start(VehicleRepository vehicleRepository, OwnerRepository ownerRepository) {
         return args -> {
-            Stream.of("Oumaïma", "Abla","Khalid","Yassine").forEach(o->{
+            Stream.of("Yassine", "Jalal","Moussa").forEach(o->{
                 Owner owner=Owner.builder()
                         .id(null)
                         .name(o)
