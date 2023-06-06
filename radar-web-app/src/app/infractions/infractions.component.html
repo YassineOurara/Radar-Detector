@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table" *ngIf="infractions">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Date</th>
+      <th>Vehicle's speed</th>
+      <th>Radar's Maximum Speed</th>
+      <th>Fine Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let i of infractions">
+      <td>{{i.id}}</td>
+      <td>{{i.date}}</td>
+      <td>{{i.vehicle_speed | number:'1.0-0'}} Km/h</td>
+      <td>{{i.radar_maxSpeed | number:'1.0-0'}} Km/h</td>
+      <td>{{i.fine_amount | number:'1.0-0'}} Dhs </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
