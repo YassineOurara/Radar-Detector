@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46784f01-a630-41f1-be44-8855d22c17e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/dto/OwnerRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/dto/VehicleRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/service/ImmatriculationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/service/ImmatriculationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/web/graphQL/ImmatriculationGraphQLController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/web/rest/ImmatriculationRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/entities/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/entities/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/entities/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/entities/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/enums/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/enums/Brand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/repositories/OwnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/repositories/OwnerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/repositories/VehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/repositories/VehicleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/web/ImmatriculationGraphQLController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationGrpcServiceGrpc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/web/soap/CXFSoapWebServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/web/soap/CXFSoapWebServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/web/soap/ImmatriculationSoapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/src/main/java/org/sid/immatriculationservice/web/soap/ImmatriculationSoapService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/entities/Owner$OwnerBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/entities/Owner$OwnerBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/entities/Owner.class" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/entities/Owner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/entities/Vehicle$VehicleBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/entities/Vehicle$VehicleBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/entities/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/entities/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/enums/Brand.class" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/enums/Brand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/repositories/OwnerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/repositories/OwnerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/ImmatriculationGraphQLController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationGrpcServiceGrpc$ImmatriculationGrpcServiceBaseDescriptorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationGrpcServiceGrpc$ImmatriculationGrpcServiceBlockingStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationGrpcServiceGrpc$ImmatriculationGrpcServiceFileDescriptorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationGrpcServiceGrpc$ImmatriculationGrpcServiceFutureStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationGrpcServiceGrpc$ImmatriculationGrpcServiceImplBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationGrpcServiceGrpc$ImmatriculationGrpcServiceMethodDescriptorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationGrpcServiceGrpc$ImmatriculationGrpcServiceStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationGrpcServiceGrpc$MethodHandlers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationGrpcServiceGrpc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllOwnersRequest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllOwnersRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllOwnersRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllOwnersRequestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllOwnersResponse$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllOwnersResponse$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllOwnersResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllOwnersResponseOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllVehiclesRequest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllVehiclesRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllVehiclesRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllVehiclesRequestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllVehiclesResponse$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllVehiclesResponse$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllVehiclesResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetAllVehiclesResponseOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetVehicleRequest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetVehicleRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetVehicleRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$GetVehicleRequestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$Owner$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$Owner$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$Owner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$OwnerOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$Vehicle$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$Vehicle$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$VehicleOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$getVehicleResponse$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$getVehicleResponse$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$getVehicleResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService$getVehicleResponseOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/grpc/stub/ImmatriculationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/soap/ImmatriculationSoapService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Immatriculation/target/classes/org/sid/immatriculationservice/web/soap/ImmatriculationSoapService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2RekolEbs4va44AE1WjGcqdhdvA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RESTKit.sync.cert.Ide": "true",
+    "RESTKit.sync.env.Ide": "true",
+    "RESTKit.sync.requestConfig.Ide": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/smart asus/OneDrive/Documents/GitHub/Radar-Detector/radar-web-app"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46784f01-a630-41f1-be44-8855d22c17e5" name="Changes" comment="" />
+      <created>1687618115848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687618115848</updated>
+    </task>
+    <servers />
+  </component>
+</project>
