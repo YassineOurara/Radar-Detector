@@ -1,4 +1,5 @@
 package org.sid.immatriculationservice.security;
+/*
 import org.keycloak.adapters.springsecurity.KeycloakConfiguration;
 import org.keycloak.adapters.springsecurity.config.KeycloakWebSecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -8,11 +9,11 @@ import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy;
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
 
-
+/*
 @KeycloakConfiguration
 
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
+//public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 
     @Override
     protected SessionAuthenticationStrategy sessionAuthenticationStrategy(){
@@ -34,3 +35,4 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     }
 
 }
+*/

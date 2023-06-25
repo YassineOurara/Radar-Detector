@@ -1,6 +1,6 @@
 package org.sid.immatriculationservice.security;
 
-
+/*
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,3 +12,4 @@ public class KeycloackAdapterConfig {
         return new KeycloakSpringBootConfigResolver();
     }
 }
+*/

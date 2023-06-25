@@ -13,3 +13,19 @@
 .popup.open {
   display: block;
 }
+.detail-button {
+  color: #FF6445;
+  border-color: #FF6445;
+}
+.detail-button:hover {
+  background-color: #FF6445;
+  border-color: #FF6445;
+  color: #ffffff;
+}
+
+.custom-label {
+  color: #FF6445;
+}
+.justify-content-start{
+  color: #FF6445;
+}

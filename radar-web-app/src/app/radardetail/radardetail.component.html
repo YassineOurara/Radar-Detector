@@ -2,7 +2,7 @@
   <br>
   <div class="d-flex justify-content-between">
     <div class="d-flex justify-content-start">
-      <h4><i class="bi bi-card-list"></i> Radar's Infraction List</h4>
+      <h4 class="label custom-label"><i class="bi bi-card-list"></i> Radar's Infraction List</h4>
     </div>
   </div>
   <br>
@@ -26,7 +26,7 @@
       <td>{{i.vehicle_speed | number:'1.0-0'}} Km/h</td>
       <td>{{i.fine_amount | number:'1.0-0'}} Dhs </td>
       <td>
-        <button class ="btn btn-outline-primary"(click)="openForm(i)" > <i class="bi bi-search"></i></button>
+        <button class ="btn detail-button"(click)="openForm(i)" > <i class="bi bi-search"></i></button>
       </td>
       <td>
         <button class="btn btn-outline-danger" (click)="deleteInfraction(i)" ><i class="bi bi-trash"></i></button>
@@ -37,7 +37,7 @@
 
   <div class="popup card" *ngIf="isFormOpen && infractiondetail != null">
     <div class="card-body">
-      <h4>Infraction details</h4>
+      <h4 class="bold-label custom-label">Infraction details</h4>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
@@ -89,7 +89,7 @@
         </div>
         <br>
         <br>
-        <h5><i class="bi bi-person-fill"></i> Owner's details</h5>
+        <h5 class="bold-label custom-label"><i class="bi bi-person-fill"></i> Owner's details</h5>
         <div class="col-md-6">
           <div class="form-group">
             <label for="ownerName">Name</label>
