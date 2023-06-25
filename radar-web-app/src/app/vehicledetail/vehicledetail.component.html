@@ -1,0 +1,27 @@
+<body>
+<div class="container"*ngIf="vehicledetail">
+  <h2>Owner Details</h2>
+  <div class="row">
+    <div class="col">
+      <br>
+      <h3>Vehicle ID: {{vehicleId}}</h3>
+      <br>
+      <div class="list-group">
+        <div class="list-group-item">
+          <label class="list-group-item-label">Owner's name:</label>
+          <div class="list-group-item-value">{{vehicledetail.name}}</div>
+        </div>
+        <div class="list-group-item">
+          <label class="list-group-item-label">Owner's Birthdate:</label>
+          <div class="list-group-item-value">{{vehicledetail.birthDate }} </div>
+        </div>
+        <div class="list-group-item">
+          <label class="list-group-item-label">Owners' email:</label>
+          <div class="list-group-item-value">{{vehicledetail.email}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+</body>
+

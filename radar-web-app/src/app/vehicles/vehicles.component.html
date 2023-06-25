@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="float-right">
+    <button class="btn btn-outline-success" (click)="openFormPopup()"><i class="bi bi-plus-circle"></i> Add vehicle</button>
+    <div>
+  <table class="table" *ngIf="vehicles">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Registration plate number</th>
+      <th>Brand</th>
+      <th>Tax Horsepower</th>
+      <th>Model</th>
+      <th>Owner Details</th>
+      <th>Delete Vehicle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let v of vehicles">
+      <td>{{v.id}}</td>
+      <td>{{v.registration_plate_number}}</td>
+      <td>{{v.brand}}</td>
+      <td>{{v.tax_horsepower}}</td>
+      <td>{{v.vehicle_model}}</td>
+      <td>
+        <button class ="btn btn-outline-primary" (click)="getVehicleDetail(v)"> <i class="bi bi-search"></i></button>
+      </td>
+      <td>
+        <button class="btn btn-outline-danger" (click)="deleteVehicle(v.id)"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+    </div></div></div>
+      <!-- Popup with bootstrap -->
+      <div class="popup card" *ngIf="isFormPopupOpen">
+        <div class="card-body">
+          <!-- Popup content with ability to add new radar -->
+          <h4><i class="bi bi-plus-circle"></i> Add new vehicle</h4>
+          <form class="row" [formGroup]="newVehicleForm" (ngSubmit)="saveNewVehicle()">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="registration_plate_number1">Registration number</label>
+                <input type="text" class="form-control" id="registration_plate_number1" formControlName="registration_plate_number">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="brand1">Brand</label>
+                <input type="text" class="form-control" id="brand1" formControlName="brand">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="tax_horsepower1">Fiscal power</label>
+                <input type="text" class="form-control" id="tax_horsepower1" formControlName="tax_horsepower">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="model1">Model</label>
+                <input type="text" class="form-control" id="model1" formControlName="model">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="ownerName">Owner name</label>
+                <input type="text" class="form-control" id="ownerName" formControlName="ownerName">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="ownerBirthDate">Birthdate</label>
+                <input type="text" class="form-control" id="ownerBirthDate" formControlName="ownerBirthdate">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email1">Email</label>
+                <input type="text" class="form-control" id="email1" formControlName="ownerEmail">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer bg-transparent">
+          <!-- Close the popup -->
+          <button class="btn btn-outline-primary" (click)="closeFormPopup()"><i class="bi bi-x-lg"></i> Close</button>
+          <!-- Add new radar -->
+          <button class="btn btn-outline-success ms-3" (click)="saveNewVehicle()"><i class="bi bi-plus-circle"></i> Add</button>
+        </div>
+</div>
+

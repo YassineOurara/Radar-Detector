@@ -1,0 +1,30 @@
+<div class="container">
+  <table class="table" *ngIf="infractions">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Date</th>
+      <th>Vehicle's speed</th>
+      <th>Radar's Maximum Speed</th>
+      <th>Fine Amount</th>
+      <th>Details</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let i of infractions">
+      <td>{{i.id}}</td>
+      <td>{{i.date}}</td>
+      <td>{{i.vehicle_speed | number:'1.0-0'}} Km/h</td>
+      <td>{{i.radar_maxSpeed | number:'1.0-0'}} Km/h</td>
+      <td>{{i.fine_amount | number:'1.0-0'}} Dhs </td>
+      <td>
+        <button class ="btn btn-outline-primary" (click)="getInfractionDetail(i)"> <i class="bi bi-search"></i></button>
+      </td>
+      <td>
+        <button class="btn btn-outline-danger" (click)="deleteInfraction(i.id)"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
