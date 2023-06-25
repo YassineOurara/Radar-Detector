@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import { OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {RadarServiceService} from "../services/radar-service.service";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 @Component({
   selector: 'app-infractions',
   templateUrl: './infractions.component.html',
@@ -10,8 +11,9 @@ import {RadarServiceService} from "../services/radar-service.service";
 })
 export class InfractionsComponent implements OnInit{
   infractions : any;
-   err!:any;
-    constructor(private radarService:RadarServiceService, private  router : Router) { }
+  err!:any;
+  isFormOpen: boolean = false;
+    constructor(private radarService:RadarServiceService, private  router : Router, private formBuilder: FormBuilder) { }
 
     ngOnInit(): void {
       this.radarService.getInfractions().subscribe(
@@ -20,6 +22,7 @@ export class InfractionsComponent implements OnInit{
           },
           error : (err)=>{ console.log(err);}
         });
+      this.initFormBuilder();
     }
       getInfractionDetail(i: any) {
         this.router.navigateByUrl("/infractiondetail/"+i.id)
@@ -40,4 +43,35 @@ export class InfractionsComponent implements OnInit{
     }
   }
 
+
+  openForm() {
+    this.isFormOpen = true;
+  }
+
+
+  closeForm() {
+    this.isFormOpen = false;
+  }
+  public newInfractionForm! : FormGroup;
+
+  saveNewInfraction() {
+    let radarId = this.newInfractionForm.get("radarId")?.value;
+    let vehicleId = this.newInfractionForm.get("vehicleId")?.value;
+    let vehicleSpeed = this.newInfractionForm.get("vehicleSpeed")?.value;
+    this.radarService.addInfraction(radarId, vehicleId, vehicleSpeed).subscribe({
+      next: () => {
+        // Refresh the page
+        window.location.reload();
+      }
+    });
+    console.log("DEBUG")
+  }
+
+  private initFormBuilder() {
+    this.newInfractionForm = this.formBuilder.group({
+      radarId: this.formBuilder.control('', [Validators.required]),
+      vehicleId: this.formBuilder.control('', [Validators.required]),
+      vehicleSpeed: this.formBuilder.control('', [Validators.required])
+    });
+  }
 }

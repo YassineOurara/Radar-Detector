@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import { OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
+import {RadarServiceService} from "../services/radar-service.service";
 @Component({
   selector: 'app-infractiondetail',
   templateUrl: './infractiondetail.component.html',
@@ -10,17 +11,15 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class InfractiondetailComponent implements OnInit  {
   infractiondetail : any;
   infractionId !:number;
-  constructor(private  http:HttpClient , private  router : Router,private route :ActivatedRoute) {
+  constructor(private  radarService:RadarServiceService, private  router : Router,private route :ActivatedRoute) {
     this.infractionId=route.snapshot.params['infractionId']
 
   }
 
   ngOnInit(): void {
 
-    this.http.get("http://localhost:8888/RADAR-SERVICE/rest/infractions/"+this.infractionId).subscribe(
-      { next:(data)=>{
-          this.infractiondetail = data;
-        },
-        error : (err)=>{}
+    this.radarService.getInfractionById(this.infractionId).subscribe({
+      next: infractiondetail => this.infractiondetail = infractiondetail,
+      error: err => console.log(err)
       });
     }}

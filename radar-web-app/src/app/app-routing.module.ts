@@ -4,6 +4,8 @@ import {VehiclesComponent} from "./vehicles/vehicles.component";
 import {InfractionsComponent} from "./infractions/infractions.component";
 import { InfractiondetailComponent } from './infractiondetail/infractiondetail.component';
 import {VehicledetailComponent} from "./vehicledetail/vehicledetail.component";
+import {RadarComponent} from "./radar/radar.component";
+import {RadardetailComponent} from "./radardetail/radardetail.component";
 
 const routes: Routes = [
 {
@@ -17,6 +19,11 @@ const routes: Routes = [
       },
   {
     path : "vehicledetail/:vehicleId",component:VehicledetailComponent
+  },
+  {
+    path : "radars",component:RadarComponent
+  },  {
+    path : "radardetail/:radarId",component:RadardetailComponent
   },
 ];
 

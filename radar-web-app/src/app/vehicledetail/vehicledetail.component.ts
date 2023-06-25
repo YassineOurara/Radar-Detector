@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
+import {RadarServiceService} from "../services/radar-service.service";
 
 @Component({
   selector: 'app-vehicledetail',
@@ -10,17 +11,14 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class VehicledetailComponent implements OnInit  {
   vehicledetail : any;
   vehicleId !:number;
-  constructor(private  http:HttpClient , private  router : Router,private route :ActivatedRoute) {
+  constructor(private  radarService:RadarServiceService, private  router : Router,private route :ActivatedRoute) {
     this.vehicleId=route.snapshot.params['vehicleId']
 
   }
 
   ngOnInit(): void {
-
-  this.http.get("http://localhost:8888/IMMATRICULATION-SERVICE/vehicles/"+this.vehicleId+"/owner").subscribe(
-      { next:(data)=>{
-          this.vehicledetail = data;
-        },
-        error : (err)=>{}
+    this.radarService.getVehicleById(this.vehicleId).subscribe({
+      next: vehicledetail => this.vehicledetail = vehicledetail,
+      error: err => console.log(err)
       });
   }}

@@ -15,7 +15,7 @@ export class RadarServiceService {
     return this.http.get<Array<Radar>>("http://localhost:8888/RADAR-SERVICE/rest/radars")
   }
 
-  public getRadar(id: any):Observable<Radar>{
+  public getRadarById(id: any):Observable<Radar>{
     return this.http.get<Radar>("http://localhost:8888/RADAR-SERVICE/rest/radars/"+id)
   }
   saveRadar(Radar: any) {
@@ -31,6 +31,9 @@ export class RadarServiceService {
   public getVehicles():Observable<Array<Vehicle>>{
     return this.http.get<Array<Vehicle>>("http://localhost:8888/RADAR-SERVICE/rest/vehicles/all")
   }
+  public getVehicleById(id: any):Observable<Vehicle>{
+    return this.http.get<Vehicle>("http://localhost:8888/IMMATRICULATION-SERVICE/vehicles/"+id+"/owner")
+  }
 
   deleteVehicle(id: any) {
     return this.http.delete("http://localhost:8888/IMMATRICULATION-SERVICE/rest/vehicles/"+id)
@@ -45,14 +48,21 @@ export class RadarServiceService {
   }
 
   addVehicleToOwner(savedVehicle: any, savedOwner: any) {
-    return this.http.post("http://localhost:8888/IMMATRICULATION-SERVICE/rest/vehicles/"+savedVehicle.id+"/owners/"+savedOwner.id, savedOwner);
+    const requestBody = {
+      vehicle: savedVehicle,
+      owner: savedOwner
+    };
+
+    return this.http.post("http://localhost:8888/IMMATRICULATION-SERVICE/rest/vehicles/" + savedVehicle.id + "/owners/" + savedOwner.id, requestBody);
   }
 
   public getInfractions():Observable<Array<Infraction>>{
     return this.http.get<Array<Infraction>>("http://localhost:8888/RADAR-SERVICE/rest/infractions/all")
   }
 
-
+  public getInfractionById(id: any):Observable<Infraction>{
+    return this.http.get<Infraction>("http://localhost:8888/RADAR-SERVICE/rest/infractions/"+id)
+  }
 
   deleteInfraction(id: any) {
     return this.http.delete("http://localhost:8888/INFRACTION-SERVICE/rest/infractions/"+id)

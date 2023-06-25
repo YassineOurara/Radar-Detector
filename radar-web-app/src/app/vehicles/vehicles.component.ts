@@ -14,6 +14,7 @@ export class VehiclesComponent implements OnInit{
   vehicles : any;
   private savedVehicle!: Object;
   private savedOwner!: Object;
+  isFormOpen: boolean = false;
     constructor(private  radarService:RadarServiceService, private  router : Router, private formBuilder: FormBuilder) { }
 
     ngOnInit(): void {
@@ -46,23 +47,21 @@ export class VehiclesComponent implements OnInit{
     }
   }
 
-  isFormPopupOpen: boolean = false;
 
-  openFormPopup() {
-    this.isFormPopupOpen = true;
-    this.newVehicleForm.reset(); // Reset the form
+
+  openForm() {
+    this.isFormOpen = true;
   }
 
-
-  closeFormPopup() {
-    this.isFormPopupOpen = false;
+  closeForm() {
+    this.isFormOpen = false;
   }
   public newVehicleForm!: FormGroup;
   saveNewVehicle() {
     let vehicleRegNumber = this.newVehicleForm.get("registration_plate_number")?.value;
     let vehicleBrand = this.newVehicleForm.get("brand")?.value;
     let vehicleFiscalPower = this.newVehicleForm.get("tax_horsepower")?.value;
-    let vehicleModel = this.newVehicleForm.get("model")?.value;
+    let vehicleModel = this.newVehicleForm.get("vehicle_model")?.value;
     let vehicleOwnerName = this.newVehicleForm.get("ownerName")?.value;
     let vehicleOwnerBirthdate = this.newVehicleForm.get("ownerBirthdate")?.value;
     let vehicleOwnerEmail = this.newVehicleForm.get("ownerEmail")?.value;
@@ -70,7 +69,7 @@ export class VehiclesComponent implements OnInit{
       "registration_plate_number": vehicleRegNumber,
       "brand": vehicleBrand,
       "tax_horsepower": vehicleFiscalPower,
-      "model": vehicleModel,
+      "vehicle_model": vehicleModel,
     };
     let owner = {
       "name": vehicleOwnerName,
@@ -79,24 +78,42 @@ export class VehiclesComponent implements OnInit{
     };
 
     this.radarService.saveVehicle(vehicle).subscribe({
-      next: data => this.savedVehicle = data,
+      next: data => {
+        this.savedVehicle = data;
+        this.radarService.saveOwner(owner).subscribe({
+          next: data => {
+            this.savedOwner = data;
+            this.radarService.addVehicleToOwner(this.savedVehicle, this.savedOwner).subscribe({
+              next: () => {
+                console.log("Vehicle added successfully!");
+                this.isFormOpen = false; // Close the popup
+
+                // Fetch the updated list of vehicles
+                this.radarService.getVehicles().subscribe({
+                  next: (data) => {
+                    this.vehicles = data;
+                  },
+                  error: (err) => console.log(err)
+                });
+              },
+              error: err => console.log(err)
+            });
+          },
+          error: err => console.log(err)
+        });
+      },
       error: err => console.log(err)
-    });
-    this.radarService.saveOwner(owner).subscribe({
-      next: data => this.savedOwner = data,
-      error: err => console.log(err)
-    });
-    this.radarService.addVehicleToOwner(this.savedVehicle, this.savedOwner).subscribe({
-      next: data => console.log(data),
     });
   }
 
+
+
   private initFormBuilder() {
     this.newVehicleForm = this.formBuilder.group({
-      regNumber: this.formBuilder.control('', [Validators.required]),
+      registration_plate_number: this.formBuilder.control('', [Validators.required]),
       brand: this.formBuilder.control('', [Validators.required]),
-      fiscalPower: this.formBuilder.control('', [Validators.required]),
-      model: this.formBuilder.control('', [Validators.required]),
+      tax_horsepower: this.formBuilder.control('', [Validators.required]),
+      vehicle_model: this.formBuilder.control('', [Validators.required]),
       ownerName: this.formBuilder.control('', [Validators.required]),
       ownerBirthdate: this.formBuilder.control('', [Validators.required]),
       ownerEmail: this.formBuilder.control('', [Validators.required]),

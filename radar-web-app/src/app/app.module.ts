@@ -10,6 +10,7 @@ import { InfractiondetailComponent } from './infractiondetail/infractiondetail.c
 import { VehicledetailComponent } from './vehicledetail/vehicledetail.component';
 import { RadarComponent } from './radar/radar.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { RadardetailComponent } from './radardetail/radardetail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     InfractionsComponent,
     InfractiondetailComponent,
     VehicledetailComponent,
-    RadarComponent
+    RadarComponent,
+    RadardetailComponent
   ],
   imports: [
     BrowserModule,

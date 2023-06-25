@@ -9,13 +9,13 @@ import org.springframework.security.web.authentication.session.RegisterSessionAu
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
 
 
-
 @KeycloakConfiguration
+
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 
     @Override
-    protected  SessionAuthenticationStrategy sessionAuthenticationStrategy(){
+    protected SessionAuthenticationStrategy sessionAuthenticationStrategy(){
         return new RegisterSessionAuthenticationStrategy(new SessionRegistryImpl());
     }
 
