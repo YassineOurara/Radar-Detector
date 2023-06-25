@@ -53,7 +53,6 @@
 		</dependency>
 
 
-
 		<dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-spring-boot-starter</artifactId>
@@ -165,6 +164,7 @@
 			<artifactId>spring-graphql-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -177,11 +177,8 @@
 			</dependency>
 
 
-			<dependency>
-				<groupId>org.keycloak</groupId>
-				<artifactId>keycloak-spring-boot-starter</artifactId>
-				<version>21.1.1</version>
-			</dependency>
+
+
 
 		</dependencies>
 	</dependencyManagement>
