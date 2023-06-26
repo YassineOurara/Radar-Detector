@@ -14,24 +14,27 @@
   display: block;
 }
 .custom-button {
-  background-color: #ED3237;
+  background-color: #0c2b75;
   color: white;
-  border-color: #ED3237;
+  border-color: #0c2b75;
 }
 .custom-button:hover {
   background-color: white;
-  color: #ED3237;
-  border-color: #ED3237;
+  color: #0c2b75;
+  border-color: #0c2b75;
 }
 .detail-button {
-  color: #FF6445;
-  border-color: #FF6445;
+  color: #0c2b75;
+  border-color: #0c2b75;
 }
 .detail-button:hover {
-  background-color: #FF6445;
-  border-color: #FF6445;
+  background-color: #0c2b75;
+  border-color: #0c2b75;
   color: #ffffff;
 }
 .justify-content-start{
-  color: #FF6445;
+  color: #0c2b75;
+}
+.table th {
+  color: #0c2b75;
 }

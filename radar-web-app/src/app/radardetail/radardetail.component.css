@@ -14,18 +14,18 @@
   display: block;
 }
 .detail-button {
-  color: #FF6445;
-  border-color: #FF6445;
+  color: #0c2b75;
+  border-color: #0c2b75;
 }
 .detail-button:hover {
-  background-color: #FF6445;
-  border-color: #FF6445;
+  background-color: #0c2b75;
+  border-color: #0c2b75;
   color: #ffffff;
 }
 
 .custom-label {
-  color: #FF6445;
+  color: #0c2b75;
 }
 .justify-content-start{
-  color: #FF6445;
+  color: #0c2b75;
 }

@@ -22,8 +22,8 @@ public class RadarServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RadarServiceApplication.class, args);
-	}
-	/*@Bean
+	}/*
+	@Bean
 	CommandLineRunner start(RadarRepository radarRepository, ImmatriculationRestClient immatriculationRestClient, InfractionRestClient infractionRestClient){
 		return args -> {
 
@@ -38,7 +38,7 @@ public class RadarServiceApplication {
 			};
 		}*/
 
-		@Bean
+	@Bean
 	CommandLineRunner start(RadarRepository radarRepository, ImmatriculationRestClient immatriculationRestClient, InfractionRestClient infractionRestClient){
 		return args -> {
 			Random random = new Random();
