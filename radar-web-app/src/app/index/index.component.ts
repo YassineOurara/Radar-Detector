@@ -7,7 +7,7 @@ import { KeycloakAngularModule , KeycloakService } from 'keycloak-angular';
 })
 
 export class IndexComponent implements OnInit {
-  username='';
+  username = '';
 
   constructor(private keycloakService: KeycloakService){
 
