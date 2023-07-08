@@ -9,8 +9,24 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+  <section class="showcase">
+    <header>
+    <nav>
+        <ul id="action" style="margin-left:42%">
+            <li><a routerLink="/index" class="hover-underline-animation"> <i class="bi bi-house-fill"></i></a></li>
+            <li><a routerLink="/radars" class="hover-underline-animation">Radars</a></li>
+            <li><a routerLink="/vehicles" class="hover-underline-animation">Vehicles</a></li>
 
-<nav class="navbar navbar-expand-sm bg-light navbar-light" style="display: flex; justify-content: center;" xmlns="http://www.w3.org/1999html">
+            <li><a routerLink="/infractions" class="hover-underline-animation">Infractions</a></li>
+
+            <!-- <li><a href="http://localhost:4200/index#service" class="hover-underline-animation">Service</a></li> -->
+            <a href="http://localhost:8080/realms/radar-realm/protocol/openid-connect/logout" class="btn1"><i class="bi bi-power">  Log out</i></a>
+        </ul>
+      </nav>
+    </header>
+    
+</section>
+<!-- <nav class="navbar navbar-expand-sm bg-light navbar-light" style="display: flex; justify-content: center;" xmlns="http://www.w3.org/1999html">
 
   <ul class="navbar-nav" >
     <li class="nav-item">
@@ -24,7 +40,7 @@
         
       </a>
       </li>
-     <!--
+     
     <li class="nav-item">
       <a class="nav-link" routerLink="/infractions">
 
@@ -35,9 +51,9 @@
       <a class="nav-link" routerLink="/vehicles">
         <h5> Vehicles </h5>
       </a>
-    </li> -->
+    </li>
   </ul>
-</nav>
+</nav> -->
 
 <router-outlet>
 

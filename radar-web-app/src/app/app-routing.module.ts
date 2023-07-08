@@ -10,6 +10,7 @@ import {RadarComponent} from "./radar/radar.component";
 import {RadardetailComponent} from "./radardetail/radardetail.component";
 
 const routes: Routes = [
+  { path: '', redirectTo: 'index', pathMatch: 'full' },
 {
   path : "vehicles",component:VehiclesComponent
   },
